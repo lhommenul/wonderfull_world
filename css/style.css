@@ -21,11 +21,9 @@ a{
     padding: 0.6rem 1.5rem;
     place-self: center;
     border-radius: 2rem;
+    font-size: 1.2em;
     border-style: solid;
     border-color: white;
-}
-marin{
-    width: 100vw;
 }
 /* HEADER */
 header{
@@ -42,14 +40,28 @@ header{
         justify-content: space-between;
         margin: 1rem;
     }
+        #burger{
+            display: flex;
+        }
         .header_nav > img{
             max-width: 40%;
         }
-        .header_nav > ul{
-            display: flex;
+        .list_menu_nav{
+            display: none;
             flex-direction: row;
             justify-content: space-around;
             align-items: center;
+        }
+        .list_menu_nav_open{
+            z-index: 2;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            display: flex;
+            flex-direction: column;
+            background-color: rgba(0, 0, 0, 0.8);
         }
             .header_nav > ul > li {
                 margin: 0.4rem;
@@ -86,7 +98,7 @@ header{
             font-weight: 400;
             flex-direction: column;
             text-align: left;
-            font-size: 4rem;
+            font-size: 3rem;
         }
             .main_tittle > span {
                 text-align: right;
@@ -114,14 +126,20 @@ header{
     .list_cards{
         padding: 0px;
         display: grid;
-        grid-template-rows: 30vw 30vw 30vw;
-        grid-template-columns: 30vw 30vw 30vw;
+        grid-template-rows: repeat(5,90vw);
+        grid-template-columns: 90vw;
         gap: 2vw;
         grid-template-areas: 
             "first horizon horizon"
             "big big secound"
             "big big third";
-    }
+        grid-template-areas: 
+            "first"
+            "horizon"
+            "big"
+            "secound"
+            "third"
+        }
         /* cards */
         .card:nth-child(1){
             grid-area: first;
@@ -228,7 +246,7 @@ footer{
         grid-template-columns: 100% 100%;
     }
         .slider_card{
-
+            color: #3693D6;
             text-align: center;
             place-self: center;
             grid-row: 1;
@@ -269,5 +287,34 @@ footer{
         transform: translateX(-100vw);
     }to{
         transform: translateX(0);
+    }
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+    .main_tittle{
+        font-size: 800%;
+    }
+    #close_menu_burger{
+        display: none;
+    }
+    #burger{
+        display: none;
+    }
+    .list_menu_nav{
+        display: flex;
+    }
+    .list_cards{
+        padding: 0px;
+        display: grid;
+        grid-template-rows: 30vw 30vw 30vw;
+        grid-template-columns: 30vw 30vw 30vw;
+        gap: 2vw;
+        grid-template-areas: 
+            "first horizon horizon"
+            "big big secound"
+            "big big third";
     }
 }
