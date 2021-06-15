@@ -1,110 +1,90 @@
 
-
-class Card{
-    constructor(props){
-        this.title = props.title
-        this.img = props.img
-        this.sub_title = props.sub_title
-        this.description = props.description
-        this.index = null;
-        this.position = null;
-        this.html = this.generateInterface(this);
-    }
-    generateInterface($){
-        const container = document.createElement('li'),
-            h3 = document.createElement('h3'),
+function generateCards(where,cards) {
+    const main_container = document.getElementById(where)  ;
+    //   GENERATE CARDS
+    const list_cards = document.createElement('ul')
+        list_cards.className = "list_slider_cards"
+    const list_btn = document.createElement('ul')
+        list_btn.className = "list_slider_btn"
+    cards.forEach((element,index) => {
+        // document button
+        const container_button = document.createElement('li'),
+            button_switch = document.createElement('button');
+        button_switch.className = "dot"
+        // document card
+        const card = document.createElement('li'),
+            h2 = document.createElement('h2'),
             img = document.createElement('img'),
-            h4 = document.createElement('h4'),
+            h3 = document.createElement('h3'),
             p = document.createElement('p');
-        h3.innerText = $.title
-        console.log($.img);
-        img.src = $.img
-        h4.innerText = $.sub_title
-        p.innerText = $.description
-        container.className = "card_carrou"
-        // append
-        container.appendChild(h3)
-        container.appendChild(img)
-        container.appendChild(h4)
-        container.appendChild(p)
-        return container;
-    }
-    setIndex(index){
-        this.index = index;
-    }
-    setPosition(position){
-        this.html.style.gridColumn = position;
-        this.position = position;
-    }
-}
+        card.className = "slider_card"
+        h2.innerText = element.title
+        img.src = element.img
+        h3.innerText = element.sub_title
+        p.innerText = element.description
+        // append button
+        container_button.appendChild(button_switch)
+        list_btn.appendChild(container_button)
+        // append card
+        card.appendChild(h2)
+        card.appendChild(img)
+        card.appendChild(h3)
+        card.appendChild(p)
+        list_cards.appendChild(card)
 
-
-
-class Container{
-    constructor(props){
-        this.cards = props.cards;
-        this.where = props.where;
-        this.html = this.generateInterface(this);
-    }
-    generateInterface($){
-        const container = document.createElement('div');
-        const list = document.createElement('ul');
-        const list_dots = document.createElement('ul');
-        list_dots.className = "scroller"
-        container.className = "carrou_container"
-        // LIST CARDS
-        list.className ="list_carrou"
-        $.cards.forEach((element,index) => {
-            const dot = document.createElement('li')
-            const button = document.createElement('button')
-            button.className = "dot"
-            list.appendChild(element.html)
-            element.setIndex(index)
-            element.setPosition(index+1)
-            // event change
-            button.addEventListener('click',(e)=>{
-                $.cards.forEach(element => {
-                    if (index === element.index) {
-                        button.className = "dot selected"
-                        element.setPosition(1)
-                    } else {
-                        element.setPosition(2)
-                    }
-                });
+        let state = true;
+        button_switch.addEventListener('click',()=>{
+            state = false
+            const i = document.getElementsByClassName('slider_card')
+            const sw = document.getElementsByClassName('dot')
+            console.log(sw);
+            for (let index = 0; index < i.length; index++) {
+                const element = i[index];
+                const btn = sw[index]
+                element.style.gridColumn = 2
+                btn.className = "dot"
+            }
+            button_switch.className = "dot selected"
+            card.style.gridColumn = 1;
+        })
+        if(state){
+            button_switch.addEventListener('focus',()=>{
+                const i = document.getElementsByClassName('slider_card')
+                const sw = document.getElementsByClassName('dot')
+                console.log(sw);
+                for (let index = 0; index < i.length; index++) {
+                    const element = i[index];
+                    const btn = sw[index]
+                    element.style.gridColumn = 2
+                    btn.className = "dot"
+                }
+                button_switch.className = "dot selected"
+                card.style.gridColumn = 1;
             })
-            
-            dot.appendChild(button)
-            list_dots.appendChild(dot)
-        });
-        // LIST DOTS
-        container.appendChild(list)
-        container.appendChild(list_dots)
-        document.getElementById($.where).appendChild(container)
-    }
+        }   
+
+    });
+    main_container.appendChild(list_cards)
+    main_container.appendChild(list_btn)
 }
 
-
-new Container(
+generateCards("cards",[
     {
-        where:"cards",
-        cards:[
-            new Card({
-                title: "Testimonial",
-                img: "./assets/photo.png",
-                sub_title: "Carolyn Clark",
-                description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo"
-            }),
-            new Card({
-                title: "Mes Couilles",
-                img: "./assets/photo.png",
-                sub_title: "dsqdsqdsqd Stark",
-                description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna"
-            }),
-            new Card({
-                title: "La table",
-                img: "./assets/photo.png",
-                sub_title: "dsqdsqdsqd Stark",
-                description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna"
-            })
-        ]
-    })
+        title: "Testimonial",
+        img: "./assets/photo.png",
+        sub_title: "Carolyn Clark",
+        description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo"
+    },
+    {
+        title: "Mes Bananes",
+        img: "./assets/photo.png",
+        sub_title: "dsqdsqdsqd Stark",
+        description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna"
+    },
+    {
+        title: "La table",
+        img: "./assets/photo.png",
+        sub_title: "dsqdsqdsqd Stark",
+        description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna"
+    }
+])
