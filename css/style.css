@@ -40,6 +40,30 @@ header{
         flex-direction: row;
         justify-content: space-between;
     }
+        .list_menu_nav_open{
+            z-index: 5;
+            position: fixed;
+            width: 100%;
+            top: 20vw;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            background-color: var(--bg_grey);   
+            text-align: center;
+            display: grid;
+            grid-template-rows: repeat(5,1fr);
+            justify-content: center;
+            padding: 1em;
+        }
+            .list_menu_nav_open a{
+                color: white;
+            }
+            .list_menu_nav_open .style_btn{
+                margin: 0px;
+                background-color: white;
+                color: var(--bg_blue);
+                font-weight: bold;
+            }
         .list_menu_nav{
             display: none;
         }
