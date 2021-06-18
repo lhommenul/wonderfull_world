@@ -178,6 +178,14 @@ header{
         width: 90%;
         padding: 1em;
     }
+        .glider img{
+            max-width: 50%;
+            place-self: center;
+        }
+        .glider h4{
+            font-size: 1.3em;
+            font-weight: lighter;
+        }
 
 /* FOOTER */
 footer{
