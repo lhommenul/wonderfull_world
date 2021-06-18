@@ -5,7 +5,9 @@
 
     /* section */
         .main_tittle{
-            margin:2em 0px ;
+            font-size: 6em;
+            margin-top: 1.5em;
+            margin-bottom: 1.5em;
         }
         .list_cards{
             padding: 1em;
@@ -33,8 +35,11 @@
             }
 
     /* FOOTER */
-    footer img{
-        max-width: 50%;
-        place-self: center;
+    footer{
+        padding: 4em;
     }
+        footer img{
+            max-width: 50%;
+            place-self: center;
+        }
 }
