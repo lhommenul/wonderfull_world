@@ -294,6 +294,23 @@ footer{
 }
 
 
+@media screen and (min-width: 576px) {
+    .main_tittle{
+        font-size: 7em;
+    }
+    .list_cards{
+        padding: 0px;
+        display: grid;
+        grid-template-columns: 45vw 45vw;
+        grid-template-rows: 45vw 90vw 45vw;
+        gap: 2vw;
+        grid-template-areas: 
+            "first horizon"
+            "big big"
+            "third secound";
+        }
+}
+
 
 
 @media screen and (min-width: 768px) {
@@ -302,6 +319,7 @@ footer{
     }
     #close_menu_burger{
         display: none;
+        padding: 1em;
     }
     #burger{
         display: none;
@@ -312,12 +330,11 @@ footer{
     .list_cards{
         padding: 0px;
         display: grid;
-        grid-template-rows: 30vw 30vw 30vw;
+        grid-template-rows: 30vw 30vw;
         grid-template-columns: 30vw 30vw 30vw;
         gap: 2vw;
         grid-template-areas: 
-            "first horizon horizon"
-            "big big secound"
-            "big big third";
-    }
+        "first horizon horizon"
+        "big big secound"
+        "big big third"}
 }
