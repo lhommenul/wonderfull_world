@@ -17,11 +17,121 @@ html{
     --bg_grey:#0000004D;
     --bg_light_grey:#E2E2E2;
 }
-h2{
+.blue_color{
     color: var(--bg_blue);
+}
+h2{
+    font-size: 3em;
+    text-align: center;
+    font-weight: bold;
 }
 /* HEADER */
 header{
     background-color: grey;
+    display: flex;
+    flex-direction: column;
+}
+    .header_nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+        .list_menu_nav{
+            display: none;
+        }
+            #burger{
+                background-color: var(--invisible);
+            }
+            .header_nav > img{
+                max-width: 50%;
+            }
+    .main_tittle{
+        text-align: center;
+        font-size: 2em;
+    }
+
+/* ============= SECTIONS ==============*/
+.section_about_me{
+        background-color: var(--bg_blue);
+    color: white;
 }
 
+/* 2 SECTION */
+.section_about_me{
+    padding: 1em;
+}
+/* 3 SECTION */
+.blue_color{
+    margin: 0.8em 0px;
+}
+    .list_cards{
+        display: grid;
+        grid-template-columns: 90vw;
+        grid-template-rows: repeat(5,minmax(90vw,90vw));
+        row-gap: 1em;
+        justify-content: center;
+    }
+        .card{
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+        }
+            .card img{
+                grid-column: 1;
+                grid-row: 1;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                overflow: hidden;
+            }
+            .window{
+                color: white;
+                grid-column: 1;
+                grid-row: 1;
+                height: 0px;
+                width: 100%;
+                text-align: center;
+                display: none;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background: transparent url('../assets/icon/blue_filter.svg') 0% 0% no-repeat padding-box;
+            }
+            .window button{
+                border-radius: 50%;
+                border: solid 2px white;
+                background-color: var(--invisible);
+                color: white;
+                
+            }
+        .card:hover > .window,.card:focus > .window{
+            display: flex;
+            height: 100%;
+        }
+
+/* 4 SECTION */
+#cards{
+    width: 100%;
+}
+    #cards article{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        padding: 1em;
+    }
+
+/* FOOTER */
+footer{
+    background-color: var(--bg_blue);
+    color: white;
+}
+    .list_logo{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+        .footer_img_icon{
+            max-width: 2em;
+            max-height: 2em;
+        }
