@@ -5,16 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./js/glider/glider.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>WonderfulWorld</title>
 </head>
 <body>
     <header>
         <nav class="header_nav">
-            <img src="./assets/logo_web_site.svg" alt="logo snowmount">
-            <button id="burger" onclick="menuNav()" aria-expanded="false"><img src="./assets/menu_white_24dp.svg" alt="image_burger"></button>
+            <img src="./assets/icon/logo_web_site.svg" alt="logo snowmount">
+            <button id="burger" onclick="menuNav()" aria-expanded="false"><img src="./assets/icon/menu_white_24dp.svg" alt="image_burger"></button>
             <ul class="list_menu_nav" role="list">
                 <li><button id="close_menu_burger" onclick="menuNav()">Fermer</button></li>
                 <li><a href="/">Home</a></li>
@@ -27,7 +27,7 @@
         <section class="header_section">
             <div class="header_middle_content">
                 <h1 class="main_tittle">Wonderful<span>World</span></h1>
-                <button class="style_btn">Our Work -></button>
+                <button class="style_btn"><a href="#encre_our">Our Work -></a></button>
             </div>
         </section>
     </header>
@@ -38,7 +38,7 @@
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo</p>
         </section>
         <!-- THIRD SECTION -->
-        <section class="section_third">
+        <section class="section_third" id="encre_our">
             <h2>Our Work</h2>
             <ul class="list_cards">
                 <li class="card">                   
@@ -80,7 +80,29 @@
         </section>
         <!-- FOURTH SECTION -->
         <section id="cards">
-
+            <div class="glider-contain">
+                <div class="glider">
+                    <div><img alt="Test" src="http://placehold.it/300x300?text=1"></div>
+                    <div><img alt="Test" src="http://placehold.it/300x300?text=2"></div>
+                    <div><img alt="Test" src="http://placehold.it/300x300?text=3"></div>
+                    <div><img alt="Test" src="http://placehold.it/300x300?text=4"></div>
+                    <div><img alt="Test" src="http://placehold.it/300x300?text=5"></div>
+                    <div><img alt="Test" src="http://placehold.it/300x300?text=6"></div>
+                    <div><img alt="Test" src="http://placehold.it/300x300?text=7"></div>
+                    <div><img alt="Test" src="http://placehold.it/300x300?text=8"></div>
+                    <div><img alt="Test" src="http://placehold.it/300x300?text=9"></div>
+                    <div><img alt="Test" src="http://placehold.it/300x300?text=10"></div>
+                    <div><img alt="Test" src="http://placehold.it/300x300?text=11"></div>
+                    <div><img alt="Test" src="http://placehold.it/300x300?text=12"></div>
+                    <div><img alt="Test" src="http://placehold.it/300x300?text=13"></div>
+                    <div><img alt="Test" src="http://placehold.it/300x300?text=14"></div>
+                    <div><img alt="Test" src="http://placehold.it/300x300?text=15"></div>
+                    <div><img alt="Test" src="http://placehold.it/300x300?text=16"></div>
+                </div>
+                <button class="glider-prev">&laquo;</button>
+                <button class="glider-next">&raquo;</button>
+                <div id="dots"></div>
+            </div>
         </section>
     </main>
     <footer>
@@ -98,7 +120,7 @@
         <div class="footer_column">
             <h4>Contact</h4>
             <ul role="list">
-                <li>(859)749-1380</li>
+                <li><a href="tel:(859)749-1380">(859)749-1380</a></li>
                 <li><a href="mailto:jessica.lee@mail.com">jessica.lee@mail.com</a></li>
             </ul>
         </div>
@@ -108,7 +130,17 @@
             <li><img class="footer_img_icon" src="./assets/youtube.svg" alt="logo youtube"></li>
         </ul>
     </footer>
-    <script src="./js/menu.js"></script>
-    <script src="./js/scroller.js"></script>
+    <script src="./js/glider/glider.js"></script>
+    <script>
+        new Glider(document.querySelector('.glider'), {
+            slidesToShow: 1,
+            dots: '#dots',
+            draggable: true,
+            arrows: {
+                prev: '.glider-prev',
+                next: '.glider-next'
+            }
+        });
+    </script>
 </body>
 </html>
