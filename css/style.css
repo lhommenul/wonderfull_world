@@ -41,7 +41,10 @@ header{
         margin: 1rem;
     }
         #burger{
+            cursor: pointer;
             display: flex;
+            background-color: rgba(0, 0, 0, 0);
+            border: none;
         }
         .header_nav > img{
             max-width: 40%;
