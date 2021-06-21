@@ -162,8 +162,22 @@
     }
 }
 @media screen and (min-width:1920px){
+    body{
+        display: grid;
+        grid-template-columns: auto 120em auto;
+        grid-template-rows: repeat(auto-fit,auto);
+        justify-content: center;
+
+    }
+    .limit_size{
+        grid-column: 2;
+    }
     .list_cards{
         max-width: 1920px;
         grid-template-columns: repeat(3,1fr);
         grid-template-columns: repeat(3,1fr);
     }
+    header{
+
+    }
+}
