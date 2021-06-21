@@ -86,8 +86,9 @@
             margin-bottom: 0px;
         }
     .list_cards{
-        grid-template-columns: 30vw 30vw 30vw;
-        grid-template-rows: 30vw 30vw 30vw;
+        max-width: 1920px;
+        grid-template-columns: repeat(3,minmax(30vw,563px));
+        grid-template-rows: repeat(3,minmax(30vw,563px));
     }
         .card:nth-child(1){
             grid-column: 2/4;
@@ -160,3 +161,9 @@
         max-height: 80%;
     }
 }
+@media screen and (min-width:1920px){
+    .list_cards{
+        max-width: 1920px;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(3,1fr);
+    }

@@ -25,6 +25,9 @@ h2{
     text-align: center;
     font-weight: bold;
 }
+.limit_size{
+    max-width: 120em;
+}
 /* HEADER */
 header{
     padding:0px 1em;
@@ -60,6 +63,7 @@ header{
             }
             .list_menu_nav_open .style_btn{
                 margin: 0px;
+                text-decoration: none;
                 background-color: white;
                 color: var(--bg_blue);
                 font-weight: bold;
@@ -139,6 +143,7 @@ header{
     margin: 0.8em 0px;
 }
     .list_cards{
+        max-width: 1920px;
         display: grid;
         grid-template-columns: 90vw;
         grid-template-rows: repeat(5,minmax(90vw,90vw));
@@ -172,7 +177,10 @@ header{
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                background: transparent url('../assets/icon/blue_filter.svg') 0% 0% no-repeat padding-box;
+                background: transparent url('../assets/icon/blue_filter.svg') 0% 0% padding-box;
+            }
+            .window a{
+                text-decoration: none;
             }
             .window > *{
                 margin: 0.2em 0px;
