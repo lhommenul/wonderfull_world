@@ -1,134 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='fr'>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Lato&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./js/glider/glider.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/media.css">
-    <title>WonderfulWorld</title>
+<title>Document</title>
 </head>
 <body>
-    <header class="limit_size">
-        <nav class="header_nav">
-            <img src="./assets/icon/logo_web_site.svg" alt="logo snowmount">
-            <button id="burger" onclick="menuNav()" aria-expanded="false"><img src="./assets/icon/menu_white_24dp.svg" alt="image_burger"></button>
-            <ul class="list_menu_nav" role="list">
-                <li><button id="close_menu_burger" onclick="menuNav()">Fermer</button></li>
-                <li><a href="/">Home</a></li>
-                <li><a href="/">About</a></li>
-                <li><a href="/">Contact</a></li>
-                <li><a href="/"><button type="button" class="style_btn">Say Hello</button></a></li>
-            </ul>
+    <header>
+        <nav class="nav_menu">
+            <img class="logo_web_site" src='./assets/icon/logo.svg' alt='image picsum'>
+            <img class="logo_hamburger" src='./assets/icon/menu_white_24dp.svg' alt='image picsum'>
         </nav>
-        <!-- FIRST SECTION HEAD -->
-        <section class="header_section">
-            <div class="header_middle_content">
-                <h1 class="main_tittle">Wonderful<span>World</span></h1>
-                <button class="style_btn"><a href="#encre_our">Our Work<img src="./assets/icon/icon_arrow.svg" alt="icon flèche"></a></button>
-            </div>
-        </section>
+        <div class="container_title_site">
+            <h1 class="title_web_site">Wonderful<span class="sub_title_web_site">World</span></h1>
+            <button class="container_title_site_btn">Our Work<img src="./assets/icon/icon_arrow.svg" alt="image flèche"> </button>
+        </div>
     </header>
-    <main class="limit_size">
-        <!-- SECOUND SECTION -->
-        <section class="section_about_me">
-            <h2>About Me</h2>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo</p>
+    <main>
+        <section class="container about_me">
+            <article class="article_about_me">
+                <h2 class="sub_title">About Me</h2>
+                <p class="about_me_para">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
+                </p>
+            </article>
         </section>
-        <!-- THIRD SECTION -->
-        <section class="section_third limit_size" id="encre_our">
-            <h2 class="blue_color">Our Work</h2>
-            <ul class="list_cards">
-                <li class="card"> 
-                    <img src="./assets/cold.png" srcset="./assets/cold_2x.png 2x" alt="image d'un chien">                  
-                    <div class="window">
-                        <h3>Fly High</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, culpa reprehenderit molestias fuga et ut suscipit aspernatur inventore dolor dignissimos?</p>
-                        <a href="/"><button class="style_btn">See More</button>                            </a>
-                    </div>                    
-                </li>
-                <li class="card"> 
-                    <img src="./assets/adorable.png" srcset="./assets/adorable_x2.png 2x" alt="image d'un chien">                  
-                    <div class="window">
-                        <h3>Fly High</h3>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo</p>
-                        <a href="/"><button class="style_btn">See More</button>                            </a>
-                    </div>                    
-                </li>
-                <li class="card"> 
-                    <img src="./assets/aventure.png" srcset="./assets/aventure_2x.png 2x" alt="image d'un chien">                  
-                    <div class="window">
-                        <h3>Fly High</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, culpa reprehenderit molestias fuga et ut suscipit aspernatur inventore dolor dignissimos?</p>
-                        <a href="/"><button class="style_btn">See More</button>                            </a>
-                    </div>                    
-                </li>
-                <li class="card"> 
-                    <img src="./assets/beatiful.png" srcset="./assets/beatiful_2x.png 2x" alt="image d'un chien">                  
-                    <div class="window">
-                        <h3>Fly High</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, culpa reprehenderit molestias fuga et ut suscipit aspernatur inventore dolor dignissimos?</p>
-                        <a href="/"><button class="style_btn">See More</button>                            </a>
-                    </div>                    
-                </li>
-                <li class="card"> 
-                    <img src="./assets/photo_montagnes.png" srcset="./assets/photo_montagnes_2x.png 2x" alt="image d'un chien">                  
-                    <div class="window">
-                        <h3>Fly High</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, culpa reprehenderit molestias fuga et ut suscipit aspernatur inventore dolor dignissimos?</p>
-                        <a href="/"><button class="style_btn">See More</button>                            </a>
-                    </div>                    
-                </li>
-            </ul>
-        </section>
-        <!-- FOURTH SECTION -->
-        <section id="cards">
-            <div class="glider-contain">
-                <div class="glider">
-                    <article><h3 class="blue_color">Testimonial</h3><img alt="photo d'une jeune femme" src="./assets/photo.png" srcset="./assets/photo_2x.png 2x"><h4 class="blue_color">Carolyn Clark</h4><p class="blue_color">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis facilis est rerum exercitationem sunt provident illum quo animi doloribus! Voluptatem asperiores modi temporibus qui quam tempora excepturi tempore vero consectetur.</p></article>
-                    <article><h3 class="blue_color">Testimonial</h3><img alt="photo d'une jeune femme" src="./assets/photo.png" srcset="./assets/photo_2x.png 2x"><h4 class="blue_color">Carolyn Clark</h4><p class="blue_color">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis facilis est rerum exercitationem sunt provident illum quo animi doloribus! Voluptatem asperiores modi temporibus qui quam tempora excepturi tempore vero consectetur.</p></article>
-                    <article><h3 class="blue_color">Testimonial</h3><img alt="photo d'une jeune femme" src="./assets/photo.png" srcset="./assets/photo_2x.png 2x"><h4 class="blue_color">Carolyn Clark</h4><p class="blue_color">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis facilis est rerum exercitationem sunt provident illum quo animi doloribus! Voluptatem asperiores modi temporibus qui quam tempora excepturi tempore vero consectetur.</p></article>
+        <section class="container">
+            <h2 class="sub_title">Our Work</h2>
+            <div class="container_card">
+                <div class="card">
+                    <img class="card_img" src='https://picsum.photos/200' alt='image picsum'>
+                    <div class="card_container_info">
+                        <h3 class="card_container_title">Fly High</h3>
+                        <p class="card_container_para" >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo</p>
+                        <button class="card_container_btn" >see more</button>
+                    </div>
                 </div>
-                <div id="dots"></div>
+                <div class="card">
+                    <img class="card_img" src='https://picsum.photos/200' alt='image picsum'>
+                    <div class="card_container_info">
+                        <h3 class="card_container_title">Fly High</h3>
+                        <p class="card_container_para" >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo</p>
+                        <button class="card_container_btn" >see more</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card_img" src='https://picsum.photos/200' alt='image picsum'>
+                    <div class="card_container_info">
+                        <h3 class="card_container_title">Fly High</h3>
+                        <p class="card_container_para" >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo</p>
+                        <button class="card_container_btn" >see more</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card_img" src='https://picsum.photos/200' alt='image picsum'>
+                    <div class="card_container_info">
+                        <h3 class="card_container_title">Fly High</h3>
+                        <p class="card_container_para" >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo</p>
+                        <button class="card_container_btn" >see more</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card_img" src='https://picsum.photos/200' alt='image picsum'>
+                    <div class="card_container_info">
+                        <h3 class="card_container_title">Fly High</h3>
+                        <p class="card_container_para" >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo</p>
+                        <button class="card_container_btn" >see more</button>
+                    </div>
+                </div>
             </div>
         </section>
-    </main>
-    <footer class="limit_size">
-        <img src="./assets/icon/logo_declinaison.svg" alt="logo snowmount">
-        <div class="footer_column">
-            <h4>Location</h4>
+        <section class="container_slider container">
+
+        </section>
+        <footer>
+            <img src='https://picsum.photos/200' alt='image picsum'>
             <address>
-                <ul role="list">
-                    <li>SnowMount</li>
-                    <li>3979 Marseille Road</li>
+                <ul>
+                    <h3>Location</h3>
+                    <li>SnowMount 3979</li>
+                    <li>Marseille Road</li>
                     <li>New York</li>
                 </ul>
-            </address>            
-        </div>
-        <div class="footer_column">
-            <h4>Contact</h4>
-            <ul role="list">
+            </address>
+            <ul>
+                <h3>Contact</h3>
                 <li><a href="tel:(859)749-1380">(859)749-1380</a></li>
                 <li><a href="mailto:jessica.lee@mail.com">jessica.lee@mail.com</a></li>
             </ul>
-        </div>
-        <ul role="list" class="list_logo">
-            <li><a href="/"><img class="footer_img_icon" src="./assets/icon/facebook.svg" alt="logo facebook"></a></li>
-            <li><a href="/"><img class="footer_img_icon" src="./assets/icon/instagram.svg" alt="logo instagram"></a></li>
-            <li><a href="/"><img class="footer_img_icon" src="./assets/icon/youtube.svg" alt="logo youtube"></a></li>
-        </ul>
+            <ul>
+                <li><a href=""><img src="" alt="icon facebook"></a></li>
+                <li><a href=""><img src="" alt="icon instagram"></a></li>
+                <li><a href=""><img src="" alt="icon youtube"></a></li>
+            </ul>
+        </footer>
+    </main>
+    <footer>
     </footer>
-    <script src="./js/glider/glider.js"></script>
-    <script>
-        new Glider(document.querySelector('.glider'), {
-            slidesToShow: 1,
-            dots: '#dots',
-            draggable: true,
-        });
-    </script>
-    <script src="./js/menu.js"></script>
 </body>
 </html>

@@ -1,274 +1,144 @@
 /* =========================== RESET CSS =========================== */
-*{ margin: 0px; padding: 0px;font-family: 'Lato', sans-serif;}
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;600;700&family=Public+Sans:wght@400;500;600;700&display=swap');
+html{ font-size: 100%; --default_font_std: 'Lato', sans-serif;--default_font_title:'Calligraffitti', sans-serif}
+*{ margin: 0px; padding: 0px; font-family: var(--default_font_std)}
 ul{ list-style: none; }
-html{ font-size: 100%; }
 p{ font-size: 1rem; line-height: 1.5em; }
-h1{ font-family: 'Calligraffitti', cursive; font-size: 3.125rem; line-height: 3.125rem; }
-h2{ font-family: 'Lato', sans-serif; font-size: 2.5rem; line-height: 2.5rem; }
-h3{ font-family: 'Lato', sans-serif; font-size: 2rem; line-height: 2.1rem; }
+h1{ font-family: var(--default_font_std); font-size: 3.125rem; line-height: 3.125rem; }
+h2{ font-family: var(--default_font_std); font-size: 2.5rem; line-height: 2.5rem; }
+h3{ font-family: var(--default_font_std); font-size: 2rem; line-height: 2.1rem; }
 body{padding:0px; margin:0px;--invisible:rgba(0,0,0,0);}
 button{border: none;padding: 1em;}
 /* ================================================================= */
 
-html{
-    /* colors */
+/* ========== COLORS ========== */
+:root{
+    --bg_white:#FFFFFF;
     --bg_blue:#3693D6;
     --bg_light_blue:#9BC0FF;
     --bg_grey:#0000004D;
     --bg_light_grey:#E2E2E2;
 }
-.blue_color{
-    color: var(--bg_blue);
-}
-h2{
-    font-size: 3em;
+
+
+/* ======= Document ======== */
+.container{
     text-align: center;
-    font-weight: bold;
-}
-.limit_size{
-    max-width: 120em;
-}
-/* HEADER */
-header{
-    padding:0px 1em;
-    background-color: grey;
     display: flex;
     flex-direction: column;
-    background-image: url("../assets/photo_montagnes.png");
-    background-position: center;
-    background-size: cover;
+    justify-content: center;
+    padding-top: 3em;
+    padding-bottom: 3em;
 }
-    .header_nav{
+    .article_about_me{
+        padding: 0px 1em;
+    }
+        .sub_title{
+            margin-bottom: 1em;
+        }
+        .about_me_para{
+            padding-bottom: 1em;
+            font-size: 1.5em;
+        }
+
+/* HEADER */
+header{
+    padding: 2em 1em;
+    background-image: url("../assets/photo_montagnes.png");
+    background-size: cover;
+    background-position: center;
+    min-height: 35.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+    .nav_menu{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
     }
-        .list_menu_nav_open{
-            z-index: 5;
-            position: fixed;
-            width: 100%;
-            top: 20vw;
-            left: 0px;
-            right: 0px;
-            bottom: 0px;
-            background-color: var(--bg_grey);   
-            text-align: center;
-            display: grid;
-            grid-template-rows: repeat(5,1fr);
-            justify-content: center;
-            padding: 1em;
+        .logo_web_site{
+            max-width: 60%;
         }
-            .list_menu_nav_open a{
-                color: white;
-            }
-            .list_menu_nav_open .style_btn{
-                margin: 0px;
-                text-decoration: none;
-                background-color: white;
-                color: var(--bg_blue);
-                font-weight: bold;
-            }
-        .list_menu_nav{
-            display: none;
+        .logo_hamburger{
+            /* max-width: 30%; */
         }
-            #burger{
-                background-color: var(--invisible);
-            }
-            .header_nav > img{
-                max-width: 80%;
-            }
-    .main_tittle{
-        text-align: center;
-        font-size: 2em;
-    }
-    .header_middle_content{
+    .container_title_site{
+        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-        .main_tittle{
-            margin-top: 1em;
-            font-size: 4em;
+        .title_web_site{
+            font-family: var(--default_font_title);
             display: flex;
             flex-direction: column;
             text-align: right;
-            line-height: 1.2em;
-            color: white;
             font-weight: lighter;
-            text-shadow: 2px 2px 6px rgb(63, 63, 63);
+            text-shadow: 0px 3px 6px #0000004D;
             transform: rotate(-10deg);
+            font-size: 2.8em;
+            line-height: 1.5em;
+            color: white;
         }
-        .main_tittle > span{
-            font-size: 0.6em;
-            font-family: 'Calligraffitti', cursive;
-        }
-        .style_btn{
-            border-radius: 2.2em;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
+            .sub_title_web_site{
+                font-size: 0.7em;
+                font-family: var(--default_font_title);
+            }
+        .container_title_site_btn{
+            padding: 0.4em 1.25em;
             background-color: var(--bg_blue);
-            margin: 2em;
-            padding:0.6em 1em;
-        }
-            .style_btn img{
-                max-height: 0.8em;
-                margin-left:0.6em;
-            }
-            .style_btn > a{
-                font-size: 1.5em;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: center;
-                text-decoration: none;
-                color: white;
-            }
-
-/* ============= SECTIONS ==============*/
-.section_about_me{
-    background-color: var(--bg_blue);
-    text-align: center;
-    color: white;
-}
-
-/* 2 SECTION */
-.section_about_me{
-    padding: 1em;
-}
-/* 3 SECTION */
-.blue_color{
-    margin: 0.8em 0px;
-}
-    .list_cards{
-        max-width: 1920px;
-        display: grid;
-        grid-template-columns: 90vw;
-        grid-template-rows: repeat(5,minmax(90vw,90vw));
-        row-gap: 1em;
-        justify-content: center;
-    }
-        .card{
-            overflow: hidden;
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr;
-        }
-            .card img{
-                grid-column: 1;
-                grid-row: 1;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                overflow: hidden;
-            }
-            .window{
-                color: white;
-                grid-column: 1;
-                grid-row: 1;
-                height: 0px;
-                width: 100%;
-                text-align: center;
-                transform: translateY(-100%);
-                overflow: hidden;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                background: transparent url('../assets/icon/blue_filter.svg') 0% 0% padding-box;
-            }
-            .window a{
-                text-decoration: none;
-            }
-            .window > *{
-                margin: 0.2em 0px;
-            }
-            .window button{
-                padding: 0.4em 1.8em;
-                border-radius: 3em;
-                font-size: 1em;
-                border: solid 2px white;
-                background-color: var(--invisible);
-                color: white;
-                
-            }
-        .card:hover > .window,.card:focus > .window, .window:focus-within{
-            transform: translateY(0);
-            height: 100%;
-        }
-
-/* 4 SECTION */
-#cards{
-    width: 100%;
-}
-    #cards article{
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        width: 90%;
-        padding: 1em;
-    }
-        .glider img{
-            max-width: 50%;
-            place-self: center;
-        }
-        .glider h4{
-            font-size: 1.3em;
-            font-weight: lighter;
-        }
-
-/* FOOTER */
-footer{
-    background-color: var(--bg_blue);
-    color: white;
-    display: grid;
-    grid-template-rows: auto auto auto;
-    grid-template-columns: auto auto;
-    column-gap: 1em;
-    padding: 1em;
-}
-    footer img{
-        margin: 1em 0em;
-        width: 100%;
-        grid-column: 1/3;
-        grid-row: 1;
-    }
-    footer .footer_column:nth-child(1){
-        grid-column: 1;
-        grid-row: 2;
-    }
-    footer .footer_column:nth-child(2){
-        grid-column: 2;
-        grid-row: 2;
-    }
-    .footer_column{
-        text-align: left;
-    }
-    .footer_column li{
-        margin: 1em 0em;
-    }
-    .footer_column a{
-        text-decoration: none;
-        color: white;
-    }
-    .list_logo{
-        padding: 2em 0em;
-        grid-column: 1/3;
-        grid-row: 3;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        align-items: center;
-        margin: auto;
-        column-gap: 1em;
-    }
-        .list_logo li{ 
+            color: white;
+            font-weight: bolder;
+            font-size: 1.5em;
+            border-radius: 2.1em;
             display: flex;
             justify-content: center;
             align-items: center;
         }
-        .footer_img_icon{
-            max-width: 2em;
-            max-height: 2em;
+/* About Me */
+.about_me{
+    background-color: var(--bg_blue);
+    color: white;
+}
+
+/* section cards */
+.container_card{
+    margin: auto;
+    display: grid;
+    grid-template-rows: repeat(5,95vw);
+    grid-template-columns: 95vw;
+    gap: 0.6em;
+}
+    .card_img{
+        height: 100%;
+        width: 100%;
+        object-fit:cover;
+    }
+    .card_img:hover > .card_container_info{
+        display: flex;
+    }
+    .card_container_info{
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+        .card_container_title{
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .card_container_para{
+            text-align: center;
+            font-size: 0.875em;
+        }
+        .card_container_btn{
+            font-size: 0.875em;
+            font-weight: medium;
+            padding: 0.4em 1.5em;
+            border: 2px solid #FFFFFF;
+            background-color: var(--invisible);
+            border-radius: 2em;
         }
